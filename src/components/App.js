@@ -1,11 +1,11 @@
 
 import './css/App.css';
-
+import StressSlider from './StressSlider';
 function App() {
   return (
-    <div className="App">
-     
-    </div>
+   
+  <StressSlider></StressSlider>
+   
   );
 }
 
