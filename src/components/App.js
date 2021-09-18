@@ -1,12 +1,14 @@
 
 import './css/App.css';
 import StressSlider from './StressSlider';
+import Menu from './Menu';
 
 function App() {
   return (
-   
-  <StressSlider></StressSlider>
-   
+    <>
+    <StressSlider></StressSlider>
+    <Menu />
+    </>
   );
 }
 
