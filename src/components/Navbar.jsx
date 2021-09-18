@@ -17,7 +17,7 @@ const NavBar = (props) => {
 					</Navbar.Brand>
 					<div>
                         <Menu/>
-						{!props.loggedIn && <button className="btn btn-primary mx-1" onClick={props.onClickLogin}>Login</button>}
+						{!props.loggedIn && <button className="btn btn-outline-dark mx-1" onClick={props.onClickLogin}>Login</button>}
                         {props.loggedIn && <button className="btn btn-secondary mx-1" onClick={props.onClickLogout}>Logout</button>}
 					</div>
 				</Container>

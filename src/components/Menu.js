@@ -26,7 +26,7 @@ const Menu = () => {
 		<div class="main">
 			<input type="checkbox" id="drop-4"/>
 			<label for="drop-4" class="bg-info">
-				<a class="btn btn-primary dropHeader dropHeader-4">
+				<a class="btn btn-outline-light dropHeader dropHeader-4">
 					<i class="fab fa-napster"></i>
 				</a>
 			</label>
