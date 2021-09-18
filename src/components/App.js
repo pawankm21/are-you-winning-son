@@ -1,14 +1,19 @@
-
-import StressSlider from './StressSlider';
+import StressSlider from "./StressSlider";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Menu from './Menu';
+import "./css/App.css";
+import Menu from "./Menu";
+import Container from "react-bootstrap/Container";
 
 function App() {
   return (
-    <>
-    <StressSlider></StressSlider>
-    <Menu />
-    </>
+    <Container>
+      < Container>
+        <StressSlider></StressSlider>
+      </Container>
+      <Container >
+        <Menu />
+      </Container>
+    </Container>
   );
 }
 
