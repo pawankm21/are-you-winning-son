@@ -1,6 +1,7 @@
 import { Fragment, useState } from "react";
 import "./css/App.css";
 import StressSlider from "./StressSlider";
+import Menu from './Menu';
 import NavBar from "./Navbar";
 import LoginForm from "./LoginForm";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -21,15 +22,15 @@ function App() {
     setLoggedIn(true);
     setShowLoginForm(false);
   }
-	return (
-		<Fragment>
+  return (
+    <Fragment>
       <header>
         <NavBar onClickLogin={loginClickHandler} onClickLogout={logoutClickHandler} loggedIn={loggedIn} />
       </header>
       <StressSlider></StressSlider>
-      {showLoginForm && <LoginForm onClose={closeForm} onLogin={loginHandler}/>}
-		</Fragment>
-	);
+      {showLoginForm && <LoginForm onClose={closeForm} onLogin={loginHandler} />}
+      <Menu />
+    </Fragment>
+  );
 }
-
 export default App;
