@@ -29,7 +29,7 @@ function App() {
       </header>
       <StressSlider></StressSlider>
       {showLoginForm && <LoginForm onClose={closeForm} onLogin={loginHandler} />}
-      <Menu />
+      {/* <Menu /> */}
     </Fragment>
   );
 }

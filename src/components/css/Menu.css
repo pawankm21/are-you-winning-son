@@ -11,18 +11,21 @@
 .main {
     display: inline-block;
     margin: 30px;
-    position: relative;
+    position: absolute;
+    bottom: -3px;
+    right: 90px;
     width: 150px;
     text-align: left;
+
 }
-label {
-    width: 100%;
+.main label {
+    /* width: 100%; */
     position: absolute;
     line-height: 45px;
     top: 0px;
     left: 0px;
     background-color: #fff;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     font-weight: 700;
     -webkit-transition: 0.04s ease-in-out;
     transition: 0.04s ease-in-out;
