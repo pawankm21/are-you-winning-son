@@ -1,20 +1,36 @@
-import StressSlider from "./StressSlider";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { Fragment, useState } from "react";
 import "./css/App.css";
-import Menu from "./Menu";
-import Container from "react-bootstrap/Container";
+import StressSlider from "./StressSlider";
+import Menu from './Menu';
+import NavBar from "./Navbar";
+import LoginForm from "./LoginForm";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
+  const [showLoginForm, setShowLoginForm] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false)
+  const loginClickHandler = () => {
+    setShowLoginForm(true);
+  }
+  const logoutClickHandler = () => {
+    setLoggedIn(false);
+  }
+  const closeForm = () => {
+    setShowLoginForm(false);
+  }
+  const loginHandler = () => {
+    setLoggedIn(true);
+    setShowLoginForm(false);
+  }
   return (
-    <Container>
-      < Container>
-        <StressSlider></StressSlider>
-      </Container>
-      <Container >
-        <Menu />
-      </Container>
-    </Container>
+    <Fragment>
+      <header>
+        <NavBar onClickLogin={loginClickHandler} onClickLogout={logoutClickHandler} loggedIn={loggedIn} />
+      </header>
+      <StressSlider></StressSlider>
+      {showLoginForm && <LoginForm onClose={closeForm} onLogin={loginHandler} />}
+      <Menu />
+    </Fragment>
   );
 }
-
 export default App;
