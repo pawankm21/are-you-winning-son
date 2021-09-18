@@ -1,6 +1,6 @@
 import { Navbar } from "react-bootstrap";
 import { Container } from "react-bootstrap";
-
+import Menu from "./Menu";
 const NavBar = (props) => {
 	return (
 		<>
@@ -13,9 +13,10 @@ const NavBar = (props) => {
 							height="30"
 							className="d-inline-block align-top"
 							alt="React Bootstrap logo"
-						/>
+                        />
 					</Navbar.Brand>
 					<div>
+                        <Menu/>
 						{!props.loggedIn && <button className="btn btn-primary mx-1" onClick={props.onClickLogin}>Login</button>}
                         {props.loggedIn && <button className="btn btn-secondary mx-1" onClick={props.onClickLogout}>Logout</button>}
 					</div>

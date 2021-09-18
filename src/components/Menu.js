@@ -23,16 +23,29 @@ const Menu = () => {
     }
 
     return (
-        <div class="main">
-            <input type="checkbox" id="drop-4" hidden />
-            <label class="dropHeader dropHeader-4" for="drop-4">Sounds</label>
-            <div class="list list-4">
-            <div class="item" onClick={forestPlay}><i class="fas fa-tree"></i>Forest</div>
-            <div class="item" onClick={waterPlay}><i class="fas fa-water"></i>Water</div>
-            <div class="item" onClick={trainPlay}><i class="fas fa-train"></i>Train</div>
-            <div class="item" onClick={campfirePlay}><i class="fas fa-fire"></i>Campfire</div>
-            </div>
-        </div>
-    )
+		<div class="main">
+			<input type="checkbox" id="drop-4"/>
+			<label for="drop-4" class="bg-info">
+				<a class="btn btn-primary dropHeader dropHeader-4">
+					<i class="fab fa-napster"></i>
+				</a>
+			</label>
+
+			<div class="list list-4">
+				<div class="item" onClick={forestPlay}>
+					<i class="fas fa-tree"></i>Forest
+				</div>
+				<div class="item" onClick={waterPlay}>
+					<i class="fas fa-water"></i>Water
+				</div>
+				<div class="item" onClick={trainPlay}>
+					<i class="fas fa-train"></i>Train
+				</div>
+				<div class="item" onClick={campfirePlay}>
+					<i class="fas fa-fire"></i>Campfire
+				</div>
+			</div>
+		</div>
+	);
 }
 export default Menu;
