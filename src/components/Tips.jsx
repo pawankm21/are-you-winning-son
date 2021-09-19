@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
+import "./css/Tips.css";
 const TIPS = [
   {
     id: 0,
@@ -45,24 +46,20 @@ const TIPS = [
 
 export default function Tips(props) {
   return (
-    <Card
-      style={{
-        width: "60%",
-        boxShadow:
-          "rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px",
-      }}
-    >
-      <Card.Header>Do this</Card.Header>
+    <div class="tips-position">
+      <Card>
+        <Card.Header>Do this</Card.Header>
 
-      <ListGroup variant="flush">
-        {TIPS[Math.floor(props.val / 10) - 1].messages.map((msg, idx) => {
-          return (
-            <ListGroup.Item key={idx}>
-              <li>{msg}</li>
-            </ListGroup.Item>
-          );
-        })}
-      </ListGroup>
-    </Card>
+        <ListGroup variant="flush">
+          {TIPS[Math.floor(props.val / 10) - 1].messages.map((msg, idx) => {
+            return (
+              <ListGroup.Item key={idx}>
+                <li>{msg}</li>
+              </ListGroup.Item>
+            );
+          })}
+        </ListGroup>
+      </Card>
+    </div>
   );
 }
