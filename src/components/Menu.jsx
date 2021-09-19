@@ -1,46 +1,50 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./css/Menu.css";
 const Menu = ({ imgUrl, setImgUrl }) => {
-  let campfire = new Audio("/sounds/campfire.mp3");
-  let forest = new Audio("/sounds/forest.mp3");
-  let water = new Audio("/sounds/rowing.mp3");
-  let train = new Audio("/sounds/train.mp3");
+  const [campfire] = useState(new Audio("/sounds/campfire.mp3"));
+  const [forest] = useState(new Audio("/sounds/forest.mp3"));
+  const [water] = useState(new Audio("/sounds/rowing.mp3"));
+  const [train] = useState(new Audio("/sounds/train.mp3"));
 
-  let campfireClickCnt = 0;
-  let forestClickCnt = 0;
-  let waterClickCnt = 0;
-  let trainClickCnt = 0;
+  const [cfp, setCfp] = useState(false);
+  const [fsp, setFsp] = useState(false);
+  const [wtp, setWtp] = useState(false);
+  const [tnp, setTnp] = useState(false);
+
+  useEffect(() => {
+    cfp ? campfire.play() : campfire.pause();
+    fsp ? forest.play() : forest.pause();
+    wtp ? water.play() : water.pause();
+    tnp ? train.play() : train.pause();
+
+  }, [cfp, fsp, wtp, tnp]);
+
 
   const campfirePlay = () => {
     setImgUrl("/images/campfire_vector.jpg");
-    console.log(campfireClickCnt);
-    if (campfireClickCnt) { campfire.play(); campfireClickCnt = 0; }
-    else { campfire.pause(); campfireClickCnt = 1; }
-  }
+    setCfp(!cfp);
+  };
 
   const forestPlay = () => {
     setImgUrl("/images/forest_vector.jpg");
-    if (forestClickCnt) { forest.play(); forestClickCnt = 0; }
-    else { forest.pause(); forestClickCnt = 1; }
-  }
+    setFsp(!fsp);
+  };
 
   const waterPlay = () => {
     setImgUrl("/images/ocean_vector.jpg");
-    if (waterClickCnt) { water.play(); waterClickCnt = 0; }
-    else { water.pause(); waterClickCnt = 1; }
-  }
+    setWtp(!wtp);
+  };
 
   const trainPlay = () => {
     setImgUrl("/images/city_vector.jpg");
-    if (trainClickCnt) { train.play(); trainClickCnt = 0; }
-    else { train.pause(); trainClickCnt = 1; }
-  }
+    setTnp(!tnp);
+  };
 
   return (
     <div className="main">
       <input type="checkbox" id="drop-4" hidden />
       <label className="dropHeader dropHeader-4 btn-sm " htmlFor="drop-4">
-        <i class="fab fa-napster"></i>
+        <i className="fab fa-napster fa-2x"></i>
       </label>
 
       <div className="list list-4">

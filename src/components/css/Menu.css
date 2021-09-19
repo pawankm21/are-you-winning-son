@@ -12,7 +12,7 @@
 .main label{
   line-height: 45px;
   font-weight: 700;
-  padding: 0px 5px 0px 5px;
+  padding: 0px;
   -webkit-transition: 0.04s ease-in-out;
   transition: 0.04s ease-in-out;
   cursor: pointer;
@@ -28,7 +28,6 @@
   border-top: 1px solid #eee;
   visibility: hidden;
   opacity: 0;
-  cursor: pointer;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
 }
@@ -40,6 +39,7 @@
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
   font-weight: 400;
+  cursor: pointer;
 }
 .item:hover {
   background-color: #eee;

@@ -46,7 +46,7 @@ const TIPS = [
 
 export default function Tips(props) {
   return (
-    <div class="tips-position">
+    <div className="tips-position">
       <Card>
         <Card.Header>Do this</Card.Header>
 
