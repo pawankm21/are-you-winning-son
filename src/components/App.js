@@ -11,7 +11,7 @@ function App() {
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [val, setVal] = useState(10);
-  const [imgUrl, setImgUrl] = useState("");
+  const [imgUrl, setImgUrl] = useState("/images/campfire_vector.jpg");
   const loginClickHandler = () => {
     setShowLoginForm(true);
   };
@@ -37,7 +37,8 @@ function App() {
             setImgUrl = {setImgUrl}
           />
         </header>
-        <section style = {{width: '100vw', height: '100vh', backgroundImage : `url(${imgUrl})`}}>
+        <section style = {{width: '100vw', height: '100vh', backgroundImage : `url(${imgUrl})`,"backgroundRepeat": "no-repeat",
+"backgroundSize": "100% 100%"}}>
           <Switch>
             <Route exact path="/">
               <Link to="/stress" id="panic-button">
