@@ -5,11 +5,12 @@ import NavBar from "./Navbar";
 import LoginForm from "./LoginForm";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Button from "react-bootstrap/Button";
-import { BrowserRouter as Router, Switch, Route,Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Tips from "./Tips";
 function App() {
   const [showLoginForm, setShowLoginForm] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [val, setVal] = useState(10);
   const loginClickHandler = () => {
     setShowLoginForm(true);
   };
@@ -36,13 +37,19 @@ function App() {
         <section>
           <Switch>
             <Route exact path="/">
-              <Link to="/stress" id="panic-button" className="btn btn-lg btn-danger">Panic!!</Link>
+              <Link
+                to="/stress"
+                id="panic-button"
+                className="btn btn-lg btn-danger"
+              >
+                Panic!!
+              </Link>
             </Route>
-            <Route  path="/stress">
-              <StressSlider></StressSlider>
+            <Route path="/stress">
+              <StressSlider val={val} setVal={setVal}></StressSlider>
             </Route>
-            <Route  path="/tips">
-              <Tips/>
+            <Route path="/tips">
+              <Tips val={val} />
             </Route>
           </Switch>
         </section>
