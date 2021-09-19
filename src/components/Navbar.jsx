@@ -14,7 +14,8 @@ const NavBar = (props) => {
         <Container>
           <Navbar.Brand>
             <Link to="/">
-              <i className="fas fa-smile-beam fa-2x"></i>
+              <span style={{color:"black"}}>  <i className="fas fa-smile-beam fa-2x"></i></span>
+            
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />

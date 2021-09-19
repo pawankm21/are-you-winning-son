@@ -43,7 +43,7 @@ const Menu = ({ imgUrl, setImgUrl }) => {
   return (
     <div className="main">
       <input type="checkbox" id="drop-4" hidden />
-      <label className="dropHeader dropHeader-4 btn-sm " htmlFor="drop-4">
+      <label className="dropHeader dropHeader-4 " htmlFor="drop-4">
         <i className="fab fa-napster fa-2x"></i>
       </label>
 

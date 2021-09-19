@@ -13,6 +13,7 @@
   line-height: 45px;
   font-weight: 700;
   padding: 0px;
+  margin: 0px;
   -webkit-transition: 0.04s ease-in-out;
   transition: 0.04s ease-in-out;
   cursor: pointer;
