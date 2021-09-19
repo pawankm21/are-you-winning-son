@@ -12,26 +12,26 @@ const Menu = ({ imgUrl, setImgUrl }) => {
   let trainClickCnt = 0;
 
   const campfirePlay = () => {
-    setImgUrl("https://wallpaperaccess.com/full/174275.jpg");
+    setImgUrl("/images/campfire_vector.jpg");
     console.log(campfireClickCnt);
     if (campfireClickCnt) { campfire.play(); campfireClickCnt = 0; }
     else { campfire.pause(); campfireClickCnt = 1; }
   }
 
   const forestPlay = () => {
-    setImgUrl("https://wallpaperaccess.com/full/174276.jpg");
+    setImgUrl("/images/forest_vector.jpg");
     if (forestClickCnt) { forest.play(); forestClickCnt = 0; }
     else { forest.pause(); forestClickCnt = 1; }
   }
 
   const waterPlay = () => {
-    setImgUrl("https://wallpaperaccess.com/full/174277.jpg");
+    setImgUrl("/images/ocean_vector.jpg");
     if (waterClickCnt) { water.play(); waterClickCnt = 0; }
     else { water.pause(); waterClickCnt = 1; }
   }
 
   const trainPlay = () => {
-    setImgUrl("https://wallpaperaccess.com/full/174278.jpg");
+    setImgUrl("/images/city_vector.jpg");
     if (trainClickCnt) { train.play(); trainClickCnt = 0; }
     else { train.pause(); trainClickCnt = 1; }
   }
