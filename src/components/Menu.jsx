@@ -1,6 +1,6 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./css/Menu.css";
-const Menu = () => {
+const Menu = ({imgUrl, setImgUrl}) => {
   let campfire = new Audio("/sounds/campfire.mp3");
   let forest = new Audio("/sounds/forest.mp3");
   let water = new Audio("/sounds/rowing.mp3");
@@ -12,27 +12,31 @@ const Menu = () => {
   let trainClickCnt = 0;
 
   const campfirePlay = () => {
+    setImgUrl("https://wallpaperaccess.com/full/174275.jpg");
     campfireClickCnt++;
     if (campfireClickCnt & 1) campfire.play();
     else campfire.pause();
   }
 
   const forestPlay = () => {
-      forestClickCnt++;
-      if (forestClickCnt & 1) forest.play();
-      else forest.pause();
+    setImgUrl("https://wallpaperaccess.com/full/174276.jpg");
+    forestClickCnt++;
+    if (forestClickCnt & 1) forest.play();
+    else forest.pause();
   }
 
   const waterPlay = () => {
-      waterClickCnt++;
-      if (waterClickCnt & 1) water.play();
-      else water.pause();
+    setImgUrl("https://wallpaperaccess.com/full/174277.jpg");
+    waterClickCnt++;
+    if (waterClickCnt & 1) water.play();
+    else water.pause();
   }
 
   const trainPlay = () => {
-      trainClickCnt++;
-      if (trainClickCnt & 1) train.play();
-      else train.pause();
+    setImgUrl("https://wallpaperaccess.com/full/174278.jpg");
+    trainClickCnt++;
+    if (trainClickCnt & 1) train.play();
+    else train.pause();
   }
 
   return (

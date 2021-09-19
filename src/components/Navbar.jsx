@@ -24,7 +24,10 @@ const NavBar = (props) => {
             <Nav className="me-auto"></Nav>
             <Nav>
               <Nav>
-                <Menu></Menu>
+                <Menu 
+                imgUrl = {props.imgUrl} 
+                setImgUrl = {props.setImgUrl}>
+                </Menu>
               </Nav>
 
               {!props.loggedIn && (
