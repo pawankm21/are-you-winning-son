@@ -1,6 +1,6 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import "./css/Menu.css";
-const Menu = ({imgUrl, setImgUrl}) => {
+const Menu = ({ imgUrl, setImgUrl }) => {
   let campfire = new Audio("/sounds/campfire.mp3");
   let forest = new Audio("/sounds/forest.mp3");
   let water = new Audio("/sounds/rowing.mp3");
@@ -13,54 +13,51 @@ const Menu = ({imgUrl, setImgUrl}) => {
 
   const campfirePlay = () => {
     setImgUrl("https://wallpaperaccess.com/full/174275.jpg");
-    campfireClickCnt++;
-    if (campfireClickCnt & 1) campfire.play();
-    else campfire.pause();
+    console.log(campfireClickCnt);
+    if (campfireClickCnt) { campfire.play(); campfireClickCnt = 0; }
+    else { campfire.pause(); campfireClickCnt = 1; }
   }
 
   const forestPlay = () => {
     setImgUrl("https://wallpaperaccess.com/full/174276.jpg");
-    forestClickCnt++;
-    if (forestClickCnt & 1) forest.play();
-    else forest.pause();
+    if (forestClickCnt) { forest.play(); forestClickCnt = 0; }
+    else { forest.pause(); forestClickCnt = 1; }
   }
 
   const waterPlay = () => {
     setImgUrl("https://wallpaperaccess.com/full/174277.jpg");
-    waterClickCnt++;
-    if (waterClickCnt & 1) water.play();
-    else water.pause();
+    if (waterClickCnt) { water.play(); waterClickCnt = 0; }
+    else { water.pause(); waterClickCnt = 1; }
   }
 
   const trainPlay = () => {
     setImgUrl("https://wallpaperaccess.com/full/174278.jpg");
-    trainClickCnt++;
-    if (trainClickCnt & 1) train.play();
-    else train.pause();
+    if (trainClickCnt) { train.play(); trainClickCnt = 0; }
+    else { train.pause(); trainClickCnt = 1; }
   }
 
   return (
-		<div className="main">
-			<input type="checkbox" id="drop-4" hidden />
-			<label className="dropHeader dropHeader-4 btn-sm " htmlFor="drop-4">
-				<i class="fab fa-napster"></i>
-			</label>
+    <div className="main">
+      <input type="checkbox" id="drop-4" hidden />
+      <label className="dropHeader dropHeader-4 btn-sm " htmlFor="drop-4">
+        <i class="fab fa-napster"></i>
+      </label>
 
-			<div className="list list-4">
-				<div className="item" onClick={forestPlay}>
-					<i className="fas fa-tree"></i>Forest
-				</div>
-				<div className="item" onClick={waterPlay}>
-					<i className="fas fa-water"></i>Water
-				</div>
-				<div className="item" onClick={trainPlay}>
-					<i className="fas fa-train"></i>Train
-				</div>
-				<div className="item" onClick={campfirePlay}>
-					<i className="fas fa-fire"></i>Campfire
-				</div>
-			</div>
-		</div>
+      <div className="list list-4">
+        <div className="item" onClick={forestPlay}>
+          <i className="fas fa-tree"></i>Forest
+        </div>
+        <div className="item" onClick={waterPlay}>
+          <i className="fas fa-water"></i>Water
+        </div>
+        <div className="item" onClick={trainPlay}>
+          <i className="fas fa-train"></i>Train
+        </div>
+        <div className="item" onClick={campfirePlay}>
+          <i className="fas fa-fire"></i>Campfire
+        </div>
+      </div>
+    </div>
   );
 };
 export default Menu;
