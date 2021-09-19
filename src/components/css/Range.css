@@ -3,8 +3,11 @@
   width: 200px;
   padding: 60px;
   position: absolute;
-  top: 20vh;
+  top: 25vh;
   left: 40vw;
+  text-shadow: 1px 2px 5px #000000;
+
+  
 }
 div .slider {
   width: 100%;

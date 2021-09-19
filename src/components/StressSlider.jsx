@@ -56,7 +56,7 @@ export default function StressSlider(props) {
           onChange={changeHandler}
         />
       </div>
-      <Link to="/tips" className="btn btn-lg btn-outline-danger " id="btn-position">
+      <Link to="/tips" className="btn btn-lg btn-danger " id="btn-position">
         Go!!
       </Link>
     </form>
