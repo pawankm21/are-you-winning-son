@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
-import Button from 'react-bootstrap/Button'
-import "./css/Range.css"
+import "./css/Range.css";
+import { Link } from "react-router-dom";
 const marks = {
   10: {
     style: {
@@ -29,29 +29,18 @@ const marks = {
     label: "go see a doctor",
   },
 };
-export default function StressSlider() {
-  const [val, setVal] = useState(10)
-  function changeHandler(v)
-  {
-
-    if (v <= 10)
-    {
-      setVal(10);
+export default function StressSlider(props) {
+  function changeHandler(v) {
+    if (v <= 10) {
+      props.setVal(10);
+    } else if (v <= 20) {
+      props.setVal(20);
+    } else if (v <= 30) {
+      props.setVal(30);
+    } else if (v <= 40) {
+      props.setVal(40);
     }
-    else if (v <= 20)
-    {
-      setVal(20);
-    }
-    else if (v <= 30)
-    {
-      setVal(30);
-    }
-    else if (v <= 40)
-    {
-      setVal(40);
-    }
-    console.log(val);
-    
+    console.log(props.val);
   }
   return (
     <form>
@@ -63,11 +52,13 @@ export default function StressSlider() {
           max={40}
           marks={marks}
           step={1}
-          trackStyle={{ background: marks[val].style.color }}
+          trackStyle={{ background: marks[props.val].style.color }}
           onChange={changeHandler}
         />
       </div>
-      <Button type="submit"id="btn-position" variant="outline-danger">Go!!</Button>
+      <Link to="/tips" className="btn btn-lg btn-outline-danger ">
+        Go!!
+      </Link>
     </form>
   );
 }
