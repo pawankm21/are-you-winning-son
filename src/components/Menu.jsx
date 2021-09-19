@@ -16,27 +16,27 @@ const Menu = ({ imgUrl, setImgUrl }) => {
     fsp ? forest.play() : forest.pause();
     wtp ? water.play() : water.pause();
     tnp ? train.play() : train.pause();
-  
+
   }, [cfp, fsp, wtp, tnp]);
-  
+
 
   const campfirePlay = () => {
-    setImgUrl("https://wallpaperaccess.com/full/174275.jpg");
+    setImgUrl("/images/campfire_vector.jpg");
     setCfp(!cfp);
   };
 
   const forestPlay = () => {
-    setImgUrl("https://wallpaperaccess.com/full/174276.jpg");
+    setImgUrl("/images/forest_vector.jpg");
     setFsp(!fsp);
   };
 
   const waterPlay = () => {
-    setImgUrl("https://wallpaperaccess.com/full/174277.jpg");
+    setImgUrl("/images/ocean_vector.jpg");
     setWtp(!wtp);
   };
 
   const trainPlay = () => {
-    setImgUrl("https://wallpaperaccess.com/full/174278.jpg");
+    setImgUrl("/images/city_vector.jpg");
     setTnp(!tnp);
   };
 
