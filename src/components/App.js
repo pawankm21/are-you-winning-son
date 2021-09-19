@@ -4,7 +4,7 @@ import StressSlider from "./StressSlider";
 import NavBar from "./Navbar";
 import LoginForm from "./LoginForm";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Button from "react-bootstrap/Button";
+
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Tips from "./Tips";
 function App() {
@@ -40,11 +40,7 @@ function App() {
         <section style = {{width: '100vw', height: '100vh', backgroundImage : `url(${imgUrl})`}}>
           <Switch>
             <Route exact path="/">
-              <Link
-                to="/stress"
-                id="panic-button"
-                className="btn btn-lg btn-danger"
-              >
+              <Link to="/stress" id="panic-button">
                 Panic!!
               </Link>
             </Route>
@@ -52,6 +48,7 @@ function App() {
               <StressSlider val={val} setVal={setVal}></StressSlider>
             </Route>
             <Route path="/tips">
+              
               <Tips val={val} />
             </Route>
           </Switch>

@@ -1,8 +1,28 @@
 #panic-button{
-  width: 10vw;
-  height: 10vh;
-  font-size: 1.5rem;
+position: relative;
+  display: inline-block;
+  padding: 25px 40px;
+  cursor: pointer;
+  color: #B21E32;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-decoration: none;
+  font-size: 48px;
+  overflow: hidden;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  border-radius: 100px;
   position: absolute;
-  left: 45vw;
-  top: 45vh;
+  top: 40vh;
+  right: 40vw;
+  background: rgb(22, 22, 22);
+  font-weight: 600;
+}
+#panic-button:hover{
+  
+  color: white;
+  background: rgb(175, 29, 29);
+  -webkit-box-shadow: 0 0 10px rgb(138, 27, 27), 0 0 40px rgb(138, 27, 27), 0 0 80px rgb(138, 27, 27);
+          box-shadow: 0 0 10px rgb(138, 27, 27), 0 0 40px rgb(138, 27, 27), 0 0 80px rgb(138, 27, 27);
+
 }
