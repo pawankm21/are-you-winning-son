@@ -1,0 +1,8 @@
+#timer{
+    width: 15vw;
+    height: auto;
+    position: absolute;
+    left: 43vw;
+    margin-top: 30px;
+    text-align: center;
+}

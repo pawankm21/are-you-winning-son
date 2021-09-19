@@ -4,7 +4,7 @@ import StressSlider from "./StressSlider";
 import NavBar from "./Navbar";
 import LoginForm from "./LoginForm";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import Timer from "./Timer";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Tips from "./Tips";
 function App() {
@@ -48,7 +48,7 @@ function App() {
               <StressSlider val={val} setVal={setVal}></StressSlider>
             </Route>
             <Route path="/tips">
-              
+              <Timer duration={6*val}/>
               <Tips val={val} />
             </Route>
           </Switch>
