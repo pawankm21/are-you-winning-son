@@ -2,8 +2,9 @@
 
 .main {
   display: inline-block;
-  position: relative;
+  position: absolute;
   width: 150px;
+  right:100px;
   text-align: left;
   margin: 0px;
   padding: 0px;
