@@ -2,8 +2,9 @@
   height: 300px;
   width: 200px;
   padding: 60px;
-  position: relative;
-  top: 100px;
+  position: absolute;
+  top: 30vh;
+  left: 40vw;
 }
 div .slider {
   width: 100%;
