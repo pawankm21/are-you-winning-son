@@ -1,18 +1,34 @@
 import React, { useState } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import Button from 'react-bootstrap/Button'
 import "./css/Range.css"
 const marks = {
-  10: { style:{
-color:"green"
-  } ,label: "Low Stress"}, 20: { style:{
-color:"yellow"
-  } ,label:"medium Stress"}, 30: { style:{
-color:"orange"
-  } ,label:"high stress"}, 40: {style:{
-color:"red"
-  } ,label: "go see a doctor"}
-}
+  10: {
+    style: {
+      color: "green",
+    },
+    label: "Low Stress",
+  },
+  20: {
+    style: {
+      color: "#D6A01D",
+    },
+    label: "medium Stress",
+  },
+  30: {
+    style: {
+      color: "orange",
+    },
+    label: "high stress",
+  },
+  40: {
+    style: {
+      color: "#7C0A00",
+    },
+    label: "go see a doctor",
+  },
+};
 export default function StressSlider() {
   const [val, setVal] = useState(10)
   function changeHandler(v)
@@ -38,9 +54,20 @@ export default function StressSlider() {
     
   }
   return (
-    <div className="range">
-      <Slider className="slider" vertical={true} min={0} max={40} marks={marks} step={1} trackStyle={{ background: marks[val].style.color}} onChange={ changeHandler}/>
-     
-    </div>
+    <form>
+      <div className="range">
+        <Slider
+          className="slider"
+          vertical={true}
+          min={0}
+          max={40}
+          marks={marks}
+          step={1}
+          trackStyle={{ background: marks[val].style.color }}
+          onChange={changeHandler}
+        />
+      </div>
+      <Button type="submit"id="btn-position" variant="outline-danger">Go!!</Button>
+    </form>
   );
 }

@@ -1,68 +1,57 @@
-@import 'https://fonts.googleapis.com/css?family=Raleway:400,700';
-* {
-    box-sizing: border-box;
-    color: #34495e;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    font-family: 'Raleway', sans-serif;
-}
-.main {
-    display: inline-block;
-    margin: 30px;
-    position: absolute;
-    bottom: -3px;
-    right: 100px;
-    width: 150px;
-    text-align: left;
+@import "https://fonts.googleapis.com/css?family=Raleway:400,700";
 
+.main {
+  display: inline-block;
+  position: relative;
+  width: 150px;
+  text-align: left;
+  margin: 0px;
+  padding: 0px;
+  background: transparent;
 }
-.main label {
-    /* width: 100%; */
-    position: absolute;
-    line-height: 45px;
-    top: 0px;
-    left: 0px;
-    background-color: #fff;
-    /* padding-left: 20px; */
-    font-weight: 700;
-    -webkit-transition: 0.04s ease-in-out;
-    transition: 0.04s ease-in-out;
+.main label{
+  line-height: 45px;
+  font-weight: 700;
+  padding: 0px 5px 0px 5px;
+  -webkit-transition: 0.04s ease-in-out;
+  transition: 0.04s ease-in-out;
+  cursor: pointer;
+  transition: 0.08s ease-in;
 }
+
 .list {
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    top: 45px;
-    left: 0px;
-    border-top: 1px solid #eee;
-    visibility: hidden;
-    opacity: 0;
-    cursor: pointer;
-    -webkit-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 45px;
+  left: 0px;
+  border-top: 1px solid #eee;
+  visibility: hidden;
+  opacity: 0;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 .item {
-    width: 100%;
-    line-height: 45px;
-    padding-left: 20px;
-    background-color: #fff;
-    -webkit-transition: 0.2s ease-in-out;
-    transition: 0.2s ease-in-out;
-    font-weight: 400;
+  width: 100%;
+  line-height: 45px;
+  padding-left: 20px;
+  background-color: #fff;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  font-weight: 400;
 }
 .item:hover {
-    background-color: #eee;
+  background-color: #eee;
 }
 .list-4 {
-    -webkit-transform: translateY(-20px);
-    transform: translateY(-20px);
-    z-index: 10;
+  -webkit-transform: translateY(-20px);
+  transform: translateY(-20px);
+  z-index: 10;
 }
-#drop-4:checked~ .list-4 {
-    visibility: visible;
-    opacity: 2;
-    -webkit-transform: translateY(0px);
-    transform: translateY(0px);
+#drop-4:checked ~ .list-4 {
+  visibility: visible;
+  opacity: 2;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
 }
