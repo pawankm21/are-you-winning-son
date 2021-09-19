@@ -3,7 +3,7 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./css/Timer.css";
 export default function Timer({ duration }) {
-  const [time, setTime] = useState(10);
+  const [time, setTime] = useState(duration);
 
   useEffect(() => {
     const interval = setInterval(() => {
