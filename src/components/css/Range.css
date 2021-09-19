@@ -3,11 +3,16 @@
   width: 200px;
   padding: 60px;
   position: absolute;
-  top: 30vh;
+  top: 20vh;
   left: 40vw;
 }
 div .slider {
   width: 100%;
   transform: scale(2);
   transform-origin: 30%;
+}
+#btn-position{
+  position: absolute;
+  bottom: 10vh;
+  left: 49vw;
 }

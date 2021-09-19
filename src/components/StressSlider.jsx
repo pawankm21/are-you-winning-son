@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Slider from "rc-slider";
 import "rc-slider/assets/index.css";
+import Button from 'react-bootstrap/Button'
 import "./css/Range.css"
 const marks = {
   10: {
@@ -53,9 +54,20 @@ export default function StressSlider() {
     
   }
   return (
-    <div className="range">
-      <Slider className="slider" vertical={true} min={0} max={40} marks={marks} step={1} trackStyle={{ background: marks[val].style.color}} onChange={ changeHandler}/>
-     <button className="btn btn-lg btn-outline dark"> GO!</button>
-    </div>
+    <form>
+      <div className="range">
+        <Slider
+          className="slider"
+          vertical={true}
+          min={0}
+          max={40}
+          marks={marks}
+          step={1}
+          trackStyle={{ background: marks[val].style.color }}
+          onChange={changeHandler}
+        />
+      </div>
+      <Button type="submit"id="btn-position" variant="outline-danger">Go!!</Button>
+    </form>
   );
 }
