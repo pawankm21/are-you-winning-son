@@ -4,7 +4,8 @@ import { Link } from "react-router-dom";
 import Menu from "./Menu";
 const NavBar = (props) => {
   return (
-    <>
+    <div style={{ boxShadow: "rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px" }}>
+     
       <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
         <Container>
           <Navbar.Brand>
@@ -46,7 +47,7 @@ const NavBar = (props) => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-    </>
+    </div>
   );
 };
 export default NavBar;

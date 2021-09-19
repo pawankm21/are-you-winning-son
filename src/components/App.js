@@ -37,11 +37,7 @@ function App() {
         <section>
           <Switch>
             <Route exact path="/">
-              <Link
-                to="/stress"
-                id="panic-button"
-                className="btn btn-lg btn-danger"
-              >
+              <Link to="/stress" id="panic-button">
                 Panic!!
               </Link>
             </Route>
