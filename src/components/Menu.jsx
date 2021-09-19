@@ -6,21 +6,34 @@ const Menu = () => {
   let water = new Audio("/sounds/rowing.mp3");
   let train = new Audio("/sounds/train.mp3");
 
+  let campfireClickCnt = 0;
+  let forestClickCnt = 0;
+  let waterClickCnt = 0;
+  let trainClickCnt = 0;
+
   const campfirePlay = () => {
-    campfire.play();
-  };
+    campfireClickCnt++;
+    if (campfireClickCnt & 1) campfire.play();
+    else campfire.pause();
+  }
 
   const forestPlay = () => {
-    forest.play();
-  };
+      forestClickCnt++;
+      if (forestClickCnt & 1) forest.play();
+      else forest.pause();
+  }
 
   const waterPlay = () => {
-    water.play();
-  };
+      waterClickCnt++;
+      if (waterClickCnt & 1) water.play();
+      else water.pause();
+  }
 
   const trainPlay = () => {
-    train.play();
-  };
+      trainClickCnt++;
+      if (trainClickCnt & 1) train.play();
+      else train.pause();
+  }
 
   return (
     <div className="main">
